@@ -1,0 +1,424 @@
+/* RESETS */ 
+* {
+    margin: 0;
+    padding: 0;
+}
+/* RESETS */ 
+
+/* GRID */
+.header-principal {
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.header__logo {
+    grid-column: 1/2;
+}
+
+.header__menu__div {
+    grid-column: 2/-1;
+}
+/* GRID */
+
+/* MENU HAMBURGUER */
+.header__menu {
+    display: none;
+}
+.menu-toggle {
+    width: 40px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.one,
+.two,
+.three {
+    background-color: #333;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: .3s;
+}
+/* FULLSCREEN */
+.header__menu__div.on {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f7f7f7;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    transition-duration: .3s;
+}
+
+.header__menu__div.on nav {
+    display: block;
+}
+
+.header__menu__div.on ul {
+    padding: 5em 0 0 1em;
+}
+
+.header__menu__div.on .menu-toggle {
+    position: absolute;
+    right: 40px;
+    top: 1px;
+}
+
+.header__menu__div.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.header__menu__div.on .menu-toggle .two {
+    opacity: 0;
+}
+
+.header__menu__div.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(8px, -9px);
+}
+
+.header__menu__div.on nav li {
+    text-align: center;
+    display: block;    
+    padding-left: 0;
+}
+
+.header__menu__div.on nav li a {
+    font-size: 2em;
+    transition-duration: .3s;
+    line-height: 5em;
+}
+/* FULLSCREEN */
+/* MENU HAMBURGUER */
+
+/* CSS GERAL */
+.principal {
+    background-color: #f7f7f7;
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.header-principal {
+    background-color: #ccc;
+    padding: 10px 20px;
+    height: 4em;
+}
+
+.header__logo {
+    background-color: #2f2f2f;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding: 0 0 0 .35em; 
+    box-sizing: border-box;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+.header-principal a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: bold;
+    border-bottom: .125em solid transparent;
+    transition: .2s all linear;
+}
+.header-principal a:hover {
+    color: rgba(67, 67, 67, 0.8);
+    border-bottom: .125em solid rgba(67, 67, 67, 0.8);
+}
+
+.main-principal {
+    width: 95%;
+    margin: auto;
+}
+
+.main__title {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 20px 0 20px;
+    color: #222;
+}
+
+.main__sobre {
+    text-align: center;
+}
+
+.main__sobre img {
+    border-radius: 50%;
+    width: 18em;
+    margin-bottom: 20px;
+}
+
+.main__sobre__title {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+.main__sobre__texto {
+    color: #333;
+    letter-spacing: .07em;
+    margin-bottom: 50px;
+}
+
+.main__conhecimentos__title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+.main__conhecimentos__habilidades__design-externo {
+    width: 60%;
+    height: 2em;
+    background-color: #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin: 5px 30px 10px 5px;
+    float: left;
+}
+
+.main__conhecimentos__habilidades__design-interno {
+    padding-top: 5px;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #3188ff;
+    display: block;
+    border-radius: 25px;
+    color: #eee;
+}
+.main__conhecimentos__habilidades__html__span {
+    width: 90%;
+}
+.main__conhecimentos__habilidades__css__span {
+    width: 80%;
+}
+.main__conhecimentos__habilidades__ux__span {
+    width: 60%;
+}
+.main__conhecimentos__habilidades__js__span {
+    width: 20%;
+}
+
+.main__conhecimentos__habilidades__texto {
+    padding-top: 10px;
+    float: left;
+    color: #333;
+    letter-spacing: .07em;
+    font-weight: bold;
+}
+.upper {
+    text-transform: uppercase;
+}
+
+.main__projetos {
+    padding-top: 40px;
+    clear: both;
+}
+
+.main__projetos__title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+.main__projetos__article {
+    background-color: #ddd;
+    margin: 1.25em auto;
+    border-radius: .9375em;
+    text-align: center;
+}
+.main__projetos__article img {
+    width: 100%;
+    height: 80%;
+    border-radius: .9375em .9375em 0 0;
+}
+
+.main__projetos__article__title{
+    font-size: 1.2em;
+    padding: .2em;
+    color: #222;
+}
+
+.main__projetos__article__texto{
+    font-size: .9em;
+    font-style: italic;
+    padding: 0 .625em .625em;
+    color: #333;
+}
+
+.footer-principal {
+    background-color: #ccc;
+    height: 8em;
+    text-align: center;
+}
+
+.footer__content {
+    padding-top: 2.5em;
+    list-style: none;
+}
+
+.footer__content li {
+    display: inline-block;
+    padding-left: 1.25em;
+    font-weight: bold;
+    font-size: 1em;
+    color: #222;
+}
+
+.footer__content a {
+    color: #222;
+    text-decoration: none;
+}
+
+.footer__email {
+    text-align: center;
+    padding-top: 20px;
+    color: #222;
+    font-size: 1em;
+}
+/* CSS GERAL */
+
+@media screen and (min-width: 1024px) {
+    /* GRID */ 
+    .header-principal {
+        grid-template-columns: 50% 50%;
+    }
+    
+    .main__sobre {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 10% 90%;
+        grid-row-gap: 50px;
+        grid-column-gap: 10px;
+    }
+
+    .main__sobre__figure {
+        grid-column: 1/2;
+        grid-row: 1/-1;
+    }
+
+    .main__sobre__title {
+        grid-column: 2/-1;
+        grid-row: 1/2;
+    }
+
+    .main__sobre__texto {
+        grid-column: 2/-1;
+        grid-row: 2/-1;
+    }
+
+    .main__conhecimentos {
+        display: grid;
+        grid-template-areas: 'title title'
+                             'html  css'
+                             'ux    js'   ;
+        grid-row-gap: 10px;
+    }
+    .title {
+        grid-area: title;
+    }
+    .html {
+        grid-area: html;
+    }
+    .css {
+        grid-area: css;
+    }
+    .ux {
+        grid-area: ux;
+    }
+    .js {
+        grid-area: js;
+    }
+
+    .main__projetos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 4% 47% 47%;
+        grid-column-gap: 15px;
+    }
+
+    .main__projetos__title {
+        grid-column: 1/-1;
+        grid-row: 1/1;
+    }
+
+    .main__projetos__fashion {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .main__projetos__landing-page {
+        grid-column: 2/-1;
+        grid-row: 2/3;
+    }
+
+    .main__projetos__article__strata {
+        grid-column: 1/2;
+        grid-row: 3/-1;
+    }
+
+    .main__projetos__article__range-hotels {
+        grid-column: 2/-1;
+        grid-row: 3/-1;
+    }
+    /* GRID */ 
+
+    /* CSS GERAL */
+    .header__menu {
+        display: block;
+    }
+
+    .header__menu ul {
+        list-style: none;
+        padding-top: 20px;
+    }
+
+    .header__menu li {
+        display: inline-block;
+        padding-left: 12%;
+        font-size: 1.2em;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .main__title {
+        font-size: 2em;
+    }
+
+    .main__sobre__title {
+        text-align: left;
+        padding: 40px 0 0 30px;
+    }
+
+    .main__sobre__texto {
+        text-align: left;
+        padding: 20px 0 0 30px;
+    }
+
+    .html, .ux {
+        padding-left: 70px;
+    }
+
+    .css, .js {
+        padding-left: 40px;
+    }
+    /* CSS GERAL */
+}
+
+
+
